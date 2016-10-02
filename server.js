@@ -27,6 +27,11 @@ var foo = function() {
     var token;
     var device;
 
+    function getListValue() {
+          var selectedOption, st;
+          selectedOption = document.getElementById("myList").selectedIndex;
+          st=document.getElementById("myList").options[selectedOption].value
+
     //Initialise the login
     particle.login({username: 'wesweitzel@gmail.com', password: 'ohmygoodness'}).then(
       function(data){
@@ -48,7 +53,7 @@ var foo = function() {
           }
         );
 
-        var fnPr = particle.callFunction({ deviceId: '58003e000b51353335323536', name: 'location', argument: '2', auth: token });
+        var fnPr = particle.callFunction({ deviceId: '58003e000b51353335323536', name: 'location', argument: st, auth: token });
 
         fnPr.then(
           function(data) {
