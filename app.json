@@ -1,0 +1,7 @@
+{
+  "name": "Snyft",
+  "description": "Hack UMBC project.",
+  "repository": "https://github.com/rfongheiser/Snyft.git",
+  "logo": "",
+  "keywords": ["node", "express", "static"]
+}

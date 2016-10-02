@@ -1,0 +1,20 @@
+{
+  "name": "snyft",
+  "version": "1.0.0",
+  "description": "Hack UMBC project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfongheiser/snyft.git"
+  },
+  "author": "Ryan Fongheiser, David Smith, Wesley Weitzel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rfongheiser/snyft/issues"
+  },
+  "homepage": "https://github.com/rfongheiser/snyft#readme"
+}

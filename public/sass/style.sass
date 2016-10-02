@@ -1,0 +1,164 @@
+$border: 10px
+$font-size: 14px
+$gray: #AAAAAB
+$space: 20px
+
+*
+  box-sizing: border-box
+  outline: 0
+  font-family: 'Lato', sans-serif
+  font-weight: 100
+
+h1
+  font-size: $font-size
+  margin: 0
+  padding: 0
+
+p
+  font-size: 12px
+  margin: 0
+  padding: 0
+
+body
+  margin: 0
+  background-color: #ECECEC
+
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.checkout-box
+  width: 590px
+
+.main
+  &::before,
+  &::after
+    content: ""
+    display: table
+    clear: both
+
+// Left - Payment Info \\
+.method
+  width: 55%
+  height: 385px
+  background-color: #fff
+  padding: 30px
+  border-top-left-radius: $border
+  float: left
+
+  label
+    color: $gray
+    font-weight: 100
+    font-size: 14px
+    display: block
+    margin-bottom: 5px
+
+  input
+    margin-bottom: 20px
+    padding: 10px 20px
+    width: 100%
+    font-size: 14px
+    color: $gray
+    border: 1px solid $gray
+
+.details
+  display: flex
+  justify-content: space-between
+
+  label,
+  input
+    width: 100px
+
+
+// Drop Down Select Styles
+select
+  width: 100%
+  margin-bottom: $space
+  background: #fff url(http://image.flaticon.com/icons/png/128/118/118738.png) no-repeat 95% 50%
+  background-size: 20px
+  -webkit-appearance: none
+  border: 1px solid $gray
+  border-radius: 0
+  padding: 10px 20px
+
+  color: $gray
+  font-size: 14px
+
+
+// Right - Product Info \\
+.product
+  width: 45%
+  height: 385px
+  padding: 15px
+  text-align: center
+  background-image: linear-gradient(to bottom, #78D4FD, #29E6D6)
+  border-top-right-radius: $border
+  border-bottom-right-radius: $border
+  float: right
+  position: relative
+
+  h1, p, i
+    color: white
+    margin: 0
+
+  i
+    position: absolute
+    top: 15px
+    right: 15px
+
+    &:hover
+    cursor: pointer
+
+  .headline
+    h1
+      margin-top: 50px
+      letter-spacing: 1.1px
+
+
+    p
+      margin-top: 5px
+
+  .product-image
+    margin-top: 20px
+
+    img
+      width: 100%
+
+  .price
+    font-size: 32px
+    font-weight: bold
+
+  button
+    border: 1px solid white
+    background-color: transparent
+    color: white
+    font-size: $font-size
+    font-weight: 100
+    padding: 10px 30px
+    margin-top: 15px
+    margin-bottom: 50px
+    cursor: pointer
+
+
+// Make A Payment Button \\
+.payment
+  width: 55%
+  background-color: #363636
+  height: 50px
+  border-bottom-left-radius: $border
+  border-bottom-right-radius: $border
+
+  color: white
+  letter-spacing: 1.3px
+  font-weight: 100
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  transition: all .2s ease-in-out
+
+  &:hover
+    background-color: #29E6D6
+    cursor: pointer
