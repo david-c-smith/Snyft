@@ -11,6 +11,12 @@ app.set('view engine', 'ejs');
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
+// set the home page route
+app.get('/', function(req, res) {
+
+	// ejs render automatically looks in the views folder
+	res.render('index');
+});
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
@@ -20,6 +26,11 @@ var foo = function() {
     var particle = new Particle();
     var token;
     var device;
+
+    function getListValue() {
+          var selectedOption, st;
+          selectedOption = document.getElementById("myList").selectedIndex;
+          st=document.getElementById("myList").options[selectedOption].value
 
     //Initialise the login
     particle.login({username: 'wesweitzel@gmail.com', password: 'ohmygoodness'}).then(
@@ -42,7 +53,7 @@ var foo = function() {
           }
         );
 
-        var fnPr = particle.callFunction({ deviceId: '58003e000b51353335323536', name: 'location', argument: '2', auth: token });
+        var fnPr = particle.callFunction({ deviceId: '58003e000b51353335323536', name: 'location', argument: st, auth: token });
 
         fnPr.then(
           function(data) {
